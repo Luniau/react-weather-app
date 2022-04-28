@@ -11,7 +11,7 @@ export default function App() {
 
         <footer>
           This project was coded by <a href="https://precious-otter-6afb15.netlify.app/" target="_blank" rel="noreferrer">Luciana Carvalho</a>  and is
-          <a href="https://github.com/Luniau/Weather-React" target="_blank" rel="noreferrer"> open-sourced on github </a>
+          <a href="https://github.com/Luniau/react-weather-app" target="_blank" rel="noreferrer"> open-sourced on github </a>
         </footer>
       </div>
     </div>
