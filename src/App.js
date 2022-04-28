@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
 
-        <Weather />
+        <Weather defaultCity="Amsterdam" />
 
         <footer>
           This project was coded by <a href="https://precious-otter-6afb15.netlify.app/" target="_blank" rel="noreferrer">Luciana Carvalho</a>  and is
