@@ -1,11 +1,16 @@
-import React, {useState} from "react";
-import WeatherForecastDay from "./WeatherFoecastDay";
+import React, {useState, useEffect } from "react";
 import "./WeatherForecast.css"; 
 import axios from "axios";
+import WeatherForecastDay from "./WeatherFoecastDay";
 
-export default function WeatherForecast (props) {
+export default function WeatherForecast(props) {
     let [loaded, setLoaded] = useState (false);
     let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+      setLoaded(false);
+  }, [props.coordinates]);
+
 
     function handleResponse(response) {
         setForecast(response.data.daily);
@@ -21,16 +26,15 @@ export default function WeatherForecast (props) {
                     return (<div className="col" key={index}>
                         <WeatherForecastDay data={dailyForecast} />
 
-                    </div>);
-                }
+                    </div>
+                    );
+                } else {return null;}
                 })}
                
             </div>
         </div>
         );
-    }
-   
-    else {
+    } else {
         let apiKey = "704c1ac4921f1b0774eeea454560dd2f";
         let longitude = props.coordinates.lon;
         let latitude = props.coordinates.lat;
